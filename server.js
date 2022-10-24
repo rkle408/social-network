@@ -5,7 +5,7 @@ const helpers = require('./utils/helpers');
 // Require models
 const { User, Thought } = require('./models');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
