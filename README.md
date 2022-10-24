@@ -1,4 +1,48 @@
 # social-network
 
 
-https://masteringjs.io/tutorials/mongoose/mongoose-validate-unique-email
+
+## Table of Contents
+
+-[Installation](#installation)
+
+-[Usage](#usage)
+
+-[Screenshots](#screenshots)
+
+-[Resources](#resources)
+
+-[License](#license)
+
+-[Walkthrough-Video](#walkthrough-video)
+
+## Installation
+
+npm i express
+
+npm i mongoose
+
+## Usage
+
+Open Integrated Terminal, then run command:
+```sh
+node server.js
+```
+
+### Screenshots
+
+1) 
+
+## Resources
+
+<https://masteringjs.io/tutorials/mongoose/mongoose-validate-unique-email>. Date accessed: October 23, 2022.
+<https://mongoosejs.com/docs/schematypes.html>. Date accessed: October 23, 2022.
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This project is licensed under the terms of the MIT license.
+
+## Walkthrough Video
+<>
