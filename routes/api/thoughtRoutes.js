@@ -8,5 +8,7 @@ router.route('/')
     .get(getThoughts)
     .post();
 
+// /api/thoughts/:thoughtId
+router.route('')
 
 module.exports = router;
