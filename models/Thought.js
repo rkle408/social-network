@@ -1,6 +1,15 @@
 // Define Mongoose
 const { Schema, model } = require('mongoose');
 
+// Subdocument: reaction schema
+const reactionSchema = new Schema({
+    //Use Mongoose's ObjectId data type, Default value is set to a new ObjectId
+    reactionId: { type: Schema.Types.ObjectId, ref: 'User' }, 
+    reactionBody: { type: String, required: true, maxLength: 280 },
+    username: { type: String, required: true },
+    createdAt:  { type: Date, default: Date.now },
+});
+
 // Instance of schema
 const thoughtSchema = new Schema(
     {
@@ -9,7 +18,7 @@ const thoughtSchema = new Schema(
         // check if this is the correct time format
         username: { type: String, required: true },
         //Array of nested documents created with the reactionSchema
-        //reactions: [reactionSchema],
+        reactions: [reactionSchema],
     },
     {
         toJSON: {
@@ -23,15 +32,6 @@ const thoughtSchema = new Schema(
 thoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 })
-
-//Subdocument: reaction schema
-// const reactionSchema = new Schema({
-//     //Use Mongoose's ObjectId data type, Default value is set to a new ObjectId
-//     reactionId: { type: Schema.Types.ObjectId, ref: 'user' }, 
-//     reactionBody: { type: String, required: true, maxLength: 280 },
-//     username: { type: String, required: true },
-//     createdAt:  { type: Date, default: Date.now },
-// });
 
 // Create a model based on the schema
 const Thought = model('Thought', thoughtSchema);
