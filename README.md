@@ -37,6 +37,7 @@ node server.js
 
 <https://masteringjs.io/tutorials/mongoose/mongoose-validate-unique-email>. Date accessed: October 23, 2022.
 <https://mongoosejs.com/docs/schematypes.html>. Date accessed: October 23, 2022.
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes
 
 ## License
 
